@@ -1,0 +1,34 @@
+{
+  "badge": "O que dizem nossos clientes",
+  "titulo": "Depoimentos",
+  "items": [
+    {
+      "nome": "Michael Martins",
+      "tipo": "Cliente Fiel",
+      "foto": "/assets/images/uploads/dep.jpg",
+      "texto": "Super recomendo. Bom ambiente, pizza saborosa e boa relação custo-benefício",
+      "estrelas": 5
+    },
+    {
+      "nome": "Wellington M Cruz",
+      "tipo": "Cliente",
+      "foto": "/assets/images/uploads/dep.jpg",
+      "texto": "Ótimo local, pizza muito bem recheada e saborosa, bebidas vieram bem geladas o que eu pessoalmente valorizo muito e atendimento impecável.",
+      "estrelas": 5
+    },
+    {
+      "nome": "Dulce Nara",
+      "tipo": "Clientes Frequentes",
+      "foto": "/assets/images/uploads/dep.jpg",
+      "texto": "Que pizza deliciosa! Boa, bonita e barata. Muito bem recheada, massa leve e bem assada. Nos surpreendemos.",
+      "estrelas": 5
+    },
+    {
+      "nome": "Felipe Costa",
+      "tipo": "Cliente",
+      "foto": "/assets/images/uploads/dep.jpg",
+      "texto": "Pizza deliciosa, atendimento incrível!!",
+      "estrelas": 5
+    }
+  ]
+}

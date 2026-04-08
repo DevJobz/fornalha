@@ -1,0 +1,220 @@
+# ============================================================
+# FORNALHA PIZZARIA — Decap CMS Config
+# ============================================================
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+locale: "pt"
+
+collections:
+
+  # ── 1. CONFIGURAÇÕES ─────────────────────────────────────
+  - name: "configuracoes"
+    label: "⚙️ Configurações Gerais"
+    files:
+
+      - name: "navbar"
+        label: "Barra de Navegação e Logo"
+        file: "dados/navbar.json"
+        format: json
+        fields:
+          - { label: "Logo da Pizzaria", name: logo_url, widget: image }
+          - { label: "Texto alternativo da logo", name: logo_alt, widget: string }
+          - label: "Links do Menu"
+            name: links
+            widget: list
+            fields:
+              - { label: "Rótulo", name: label, widget: string }
+              - { label: "Link (âncora)", name: href, widget: string }
+          - { label: "Botão CTA — Rótulo", name: cta_label, widget: string }
+          - { label: "Botão CTA — Mensagem WhatsApp", name: cta_whatsapp, widget: string }
+
+      - name: "seo"
+        label: "SEO e Compartilhamento Social"
+        file: "dados/configuracoes.json"
+        format: json
+        fields:
+          - { label: "Título SEO", name: seo_titulo, widget: string }
+          - { label: "Descrição SEO (Google)", name: seo_descricao, widget: text }
+          - { label: "Palavras-chave", name: seo_keywords, widget: string }
+          - { label: "Imagem OG (1200×630px)", name: seo_og_image, widget: image }
+
+  # ── 2. SEÇÕES DA PÁGINA ──────────────────────────────────
+  - name: "secoes"
+    label: "📄 Seções da Página"
+    files:
+
+      - name: "hero"
+        label: "Hero — Banner Principal"
+        file: "dados/hero.json"
+        format: json
+        fields:
+          - { label: "Foto da Fachada (fundo)", name: imagem_fundo, widget: image }
+          - { label: "Badge (ex: Piratininga · SP · Desde 2022)", name: badge, widget: string }
+          - { label: "Título — Linha 1", name: titulo_linha1, widget: string }
+          - { label: "Título — Linha 2 (destaque)", name: titulo_linha2, widget: string }
+          - { label: "Subtítulo", name: subtitulo, widget: string }
+          - { label: "Botão Principal — Rótulo", name: cta_principal_label, widget: string }
+          - { label: "Botão Principal — Link", name: cta_principal_href, widget: string }
+          - { label: "Botão WhatsApp — Rótulo", name: cta_wpp_label, widget: string }
+          - { label: "Botão WhatsApp — Mensagem", name: cta_wpp_msg, widget: string }
+          - { label: "Stat 1 — Número", name: stat_1_num, widget: string }
+          - { label: "Stat 1 — Rótulo", name: stat_1_label, widget: string }
+          - { label: "Stat 2 — Número", name: stat_2_num, widget: string }
+          - { label: "Stat 2 — Rótulo", name: stat_2_label, widget: string }
+          - { label: "Stat 3 — Texto", name: stat_3_txt, widget: string }
+          - { label: "Stat 3 — Rótulo", name: stat_3_label, widget: string }
+
+      - name: "historia"
+        label: "Nossa História"
+        file: "dados/historia.json"
+        format: json
+        fields:
+          - { label: "Badge", name: badge, widget: string }
+          - { label: "Título", name: titulo, widget: string }
+          - { label: "Texto (separe parágrafos com linha em branco)", name: texto, widget: text }
+          - { label: "Foto da Equipe", name: imagem, widget: image }
+          - { label: "Texto alternativo da imagem", name: imagem_alt, widget: string }
+          - { label: "Assinatura", name: assinatura, widget: string }
+
+      - name: "diferenciais"
+        label: "Nossos Diferenciais"
+        file: "dados/diferenciais.json"
+        format: json
+        fields:
+          - { label: "Badge", name: badge, widget: string }
+          - { label: "Título", name: titulo, widget: string }
+          - label: "Cards de Diferenciais"
+            name: items
+            widget: list
+            min: 1
+            max: 6
+            summary: "{{fields.titulo}}"
+            fields:
+              - label: "Ícone"
+                name: icone
+                widget: select
+                options:
+                  - { label: "📅 Calendário (Rodízio)", value: "calendar" }
+                  - { label: "🔥 Fogo (Forno)", value: "fire" }
+                  - { label: "🍕 Pizza (Sabores)", value: "pizza" }
+                  - { label: "📏 Tamanho", value: "size" }
+              - { label: "Título do Card", name: titulo, widget: string }
+              - { label: "Texto explicativo", name: texto, widget: text }
+
+      - name: "empresa"
+        label: "Informações da Empresa (Contato)"
+        file: "dados/empresa.json"
+        format: json
+        fields:
+          - { label: "Badge", name: badge, widget: string }
+          - { label: "Título da Seção", name: titulo, widget: string }
+          - { label: "Nome da Empresa", name: nome, widget: string }
+          - { label: "Endereço Completo", name: endereco, widget: string }
+          - { label: "Horário de Funcionamento", name: horario, widget: string }
+          - { label: "Telefone WhatsApp (formatado)", name: telefone_wpp, widget: string }
+          - { label: "WhatsApp (somente números, com DDI)", name: whatsapp, widget: string }
+          - { label: "Telefone Fixo", name: telefone_fixo, widget: string }
+          - { label: "Instagram (URL)", name: instagram, widget: string, required: false }
+          - { label: "Facebook (URL)", name: facebook, widget: string, required: false }
+          - { label: "Google Maps Embed URL", name: google_maps_embed, widget: string }
+          - { label: "Mensagem padrão WhatsApp", name: wpp_contato_msg, widget: string }
+
+  # ── 3. CONTEÚDO DINÂMICO ─────────────────────────────────
+  - name: "conteudo"
+    label: "📦 Conteúdo Dinâmico"
+    files:
+
+      - name: "cardapio"
+        label: "🍕 Cardápio Completo (Pizzas + Bordas)"
+        file: "dados/cardapio.json"
+        format: json
+        fields:
+          - { label: "Nome da Pizzaria", name: pizzaria, widget: string }
+          - label: "Categorias de Pizza"
+            name: categorias
+            widget: list
+            summary: "{{fields.nome}} (ID: {{fields.id}})"
+            fields:
+              - { label: "ID (sem espaços, ex: tradicionais)", name: id, widget: string }
+              - { label: "Nome da Categoria", name: nome, widget: string }
+              - label: "Pizzas desta Categoria"
+                name: pizzas
+                widget: list
+                summary: "#{{fields.numero}} — {{fields.nome}}"
+                fields:
+                  - { label: "Número", name: numero, widget: number }
+                  - { label: "Nome da Pizza", name: nome, widget: string }
+                  - { label: "Ingredientes / Descrição", name: descricao, widget: text }
+                  - label: "Preços por Tamanho"
+                    name: tamanhos
+                    widget: object
+                    fields:
+                      - { label: "Média (R$)", name: media, widget: number, value_type: float }
+                      - { label: "Grande (R$)", name: grande, widget: number, value_type: float }
+                      - { label: "Gigante (R$)", name: gigante, widget: number, value_type: float }
+          - label: "Bordas Recheadas"
+            name: bordas_recheadas
+            widget: object
+            fields:
+              - label: "Sabores de Borda"
+                name: sabores
+                widget: list
+                field: { label: "Sabor", name: sabor, widget: string }
+              - label: "Preços da Borda"
+                name: precos
+                widget: object
+                fields:
+                  - { label: "Média (R$)", name: media, widget: number, value_type: float }
+                  - { label: "Grande (R$)", name: grande, widget: number, value_type: float }
+                  - { label: "Gigante (R$)", name: gigante, widget: number, value_type: float }
+
+      - name: "galeria"
+        label: "📸 Galeria (Fotos e Vídeos)"
+        file: "dados/galeria.json"
+        format: json
+        fields:
+          - { label: "Badge", name: badge, widget: string }
+          - { label: "Título", name: titulo, widget: string }
+          - label: "Itens da Galeria"
+            name: items
+            widget: list
+            summary: "{{fields.legenda}}"
+            fields:
+              - label: "Tipo"
+                name: tipo
+                widget: select
+                options:
+                  - { label: "Imagem", value: "imagem" }
+                  - { label: "Vídeo YouTube (embed)", value: "video" }
+              - { label: "Arquivo ou URL do Vídeo", name: url, widget: file }
+              - { label: "Legenda", name: legenda, widget: string }
+
+      - name: "depoimentos"
+        label: "⭐ Depoimentos de Clientes"
+        file: "dados/depoimentos.json"
+        format: json
+        fields:
+          - { label: "Badge", name: badge, widget: string }
+          - { label: "Título", name: titulo, widget: string }
+          - label: "Depoimentos"
+            name: items
+            widget: list
+            summary: "{{fields.nome}}"
+            fields:
+              - { label: "Nome do Cliente", name: nome, widget: string }
+              - { label: "Tipo (ex: Cliente Fiel)", name: tipo, widget: string }
+              - { label: "Foto do Cliente", name: foto, widget: image }
+              - { label: "Texto do Depoimento", name: texto, widget: text }
+              - label: "Estrelas"
+                name: estrelas
+                widget: select
+                options:
+                  - { label: "★★★★★ 5 estrelas", value: 5 }
+                  - { label: "★★★★☆ 4 estrelas", value: 4 }
+                  - { label: "★★★☆☆ 3 estrelas", value: 3 }

@@ -1,0 +1,17 @@
+{
+  "imagem_fundo": "/assets/images/uploads/hero-fachada.jpg",
+  "titulo_linha1": "Fornalha",
+  "titulo_linha2": "Pizzaria",
+  "badge": "Piratininga · SP · Desde 2022",
+  "subtitulo": "Forno à Lenha · Massa Artesanal · 90+ Sabores",
+  "cta_principal_label": "Ver Cardápio",
+  "cta_principal_href": "#cardapio",
+  "cta_wpp_label": "Pedir pelo WhatsApp",
+  "cta_wpp_msg": "Olá! Vim pelo site da Fornalha Pizzaria e gostaria de fazer um pedido!",
+  "stat_1_num": "90+",
+  "stat_1_label": "Sabores",
+  "stat_2_num": "3",
+  "stat_2_label": "Tamanhos",
+  "stat_3_txt": "Todo Dia",
+  "stat_3_label": "Rodízio"
+}

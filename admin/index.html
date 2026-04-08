@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel Admin — Fornalha Pizzaria</title>
+  <meta name="robots" content="noindex, nofollow">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+  CMS.registerPreviewStyle("/assets/css/style.css");
+
+  /* ── Hero Preview ─────────────────────────────── */
+  var HeroPreview = createClass({ render: function() {
+    var e=this.props.entry;
+    var t1=e.getIn(['data','titulo_linha1'])||'Fornalha';
+    var t2=e.getIn(['data','titulo_linha2'])||'Pizzaria';
+    var badge=e.getIn(['data','badge'])||'';
+    var sub=e.getIn(['data','subtitulo'])||'';
+    var imgR=e.getIn(['data','imagem_fundo']);
+    var img=imgR?this.props.getAsset(imgR).toString():'';
+    var s1n=e.getIn(['data','stat_1_num'])||'90+';
+    var s1l=e.getIn(['data','stat_1_label'])||'Sabores';
+    var s2n=e.getIn(['data','stat_2_num'])||'3';
+    var s2l=e.getIn(['data','stat_2_label'])||'Tamanhos';
+    var s3t=e.getIn(['data','stat_3_txt'])||'Todo Dia';
+    var s3l=e.getIn(['data','stat_3_label'])||'Rodízio';
+    return h('div',{style:{position:'relative',minHeight:'420px',background:img?'none':'#0A0604',backgroundImage:img?`url(${img})`:'none',backgroundSize:'cover',backgroundPosition:'center',display:'flex',flexDirection:'column',alignItems:'stretch',fontFamily:'sans-serif'}},
+      h('div',{style:{position:'absolute',inset:0,background:'linear-gradient(to bottom,rgba(10,6,4,0.2),rgba(10,6,4,0.92))'}}),
+      h('div',{style:{position:'relative',zIndex:1,flex:1,display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',textAlign:'center',padding:'60px 20px 20px'}},
+        h('span',{style:{display:'inline-block',fontFamily:'monospace',fontSize:'0.68rem',color:'#F5A623',border:'1px solid rgba(245,166,35,0.4)',padding:'6px 18px',marginBottom:'14px',letterSpacing:'0.28em'}},badge),
+        h('h1',{style:{fontFamily:'Georgia,serif',fontSize:'clamp(3rem,9vw,6rem)',fontWeight:900,fontStyle:'italic',color:'#fff',lineHeight:0.9,marginBottom:4}},t1,h('br',{}),h('em',{style:{fontStyle:'normal',color:'#C8542E'}},t2)),
+        h('p',{style:{fontFamily:'sans-serif',color:'#C4A882',letterSpacing:'0.22em',textTransform:'uppercase',fontSize:'0.85rem',margin:'16px 0'}},'sub')
+      ),
+      h('div',{style:{position:'relative',zIndex:1,display:'flex',justifyContent:'center',background:'rgba(10,6,4,0.75)',borderTop:'1px solid rgba(139,58,30,0.3)'}},
+        h('div',{style:{display:'flex'}},
+          ...[{n:s1n,l:s1l},{n:s2n,l:s2l},{n:s3t,l:s3l}].map((s,i)=>
+            h('div',{key:i,style:{padding:'14px 36px',textAlign:'center',borderRight:i<2?'1px solid rgba(255,255,255,0.06)':'none'}},
+              h('div',{style:{fontFamily:'Georgia,serif',fontSize:'1.8rem',fontWeight:900,color:'#fff'}},s.n),
+              h('div',{style:{fontFamily:'sans-serif',fontSize:'0.55rem',color:'#C4A882',letterSpacing:'0.18em',textTransform:'uppercase',marginTop:2}},s.l)
+            )
+          )
+        )
+      )
+    );
+  }});
+  CMS.registerPreviewTemplate("hero", HeroPreview);
+
+  /* ── História Preview ─────────────────────────── */
+  var HistoriaPreview = createClass({ render: function() {
+    var e=this.props.entry;
+    var titulo=e.getIn(['data','titulo'])||'Nossa História';
+    var badge=e.getIn(['data','badge'])||'';
+    var texto=e.getIn(['data','texto'])||'';
+    var imgR=e.getIn(['data','imagem']);
+    var img=imgR?this.props.getAsset(imgR).toString():'https://picsum.photos/seed/pizzeria/500/380';
+    return h('div',{style:{background:'#0A0604',padding:'50px 36px',display:'flex',gap:'40px',alignItems:'center',flexWrap:'wrap'}},
+      h('div',{style:{flex:1,minWidth:'260px'}},
+        h('span',{style:{fontFamily:'sans-serif',fontSize:'0.68rem',color:'#F5A623',letterSpacing:'0.28em',textTransform:'uppercase',marginBottom:'10px',display:'block'}},badge),
+        h('h2',{style:{fontFamily:'Georgia,serif',fontSize:'2.2rem',fontWeight:900,color:'#fff',marginBottom:'18px'}},titulo),
+        h('div',{style:{color:'#C4A882',lineHeight:'1.85',fontSize:'0.92rem'}},
+          texto.split('\n\n').filter(Boolean).map((p,i)=>h('p',{key:i,style:{marginBottom:'14px'}},p))
+        )
+      ),
+      h('div',{style:{position:'relative',flex:1,minWidth:'260px'}},
+        h('img',{src:img,style:{width:'100%',height:'320px',objectFit:'cover'}}),
+        h('div',{style:{position:'absolute',bottom:'14px',left:'-8px',background:'#8B3A1E',padding:'18px 22px',textAlign:'center'}},
+          h('span',{style:{fontFamily:'Georgia,serif',fontSize:'2.6rem',fontWeight:900,color:'#fff',display:'block',lineHeight:1}},'2022'),
+          h('span',{style:{fontFamily:'sans-serif',fontSize:'0.55rem',color:'#FFF3E6',letterSpacing:'0.14em',textTransform:'uppercase'}},'Fundada em Piratininga')
+        )
+      )
+    );
+  }});
+  CMS.registerPreviewTemplate("historia", HistoriaPreview);
+
+  /* ── Cardápio Preview ─────────────────────────── */
+  var CardapioPreview = createClass({ render: function() {
+    var e=this.props.entry;
+    var cats=e.getIn(['data','categorias']);
+    var firstCat=cats&&cats.size>0?cats.get(0):null;
+    var pizzas=firstCat?firstCat.get('pizzas'):null;
+    var catNome=firstCat?firstCat.get('nome'):'Tradicionais';
+    return h('div',{style:{background:'#0A0604',padding:'40px 28px'}},
+      h('h2',{style:{fontFamily:'Georgia,serif',fontSize:'2rem',fontWeight:900,fontStyle:'italic',color:'#fff',marginBottom:'8px'}},'Nosso ',h('em',{style:{fontStyle:'italic',color:'#C8542E'}},'Cardápio')),
+      h('p',{style:{fontFamily:'sans-serif',fontSize:'0.72rem',color:'#F5A623',letterSpacing:'0.2em',textTransform:'uppercase',marginBottom:'24px'}},'Categoria: '+catNome),
+      h('div',{style:{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(280px,1fr))',gap:'12px'}},
+        pizzas?pizzas.slice(0,4).map(function(p,i){
+          var t=p.get('tamanhos');
+          return h('div',{key:i,style:{background:'#130C07',border:'1px solid rgba(139,58,30,0.25)',borderRadius:'4px',padding:'16px'}},
+            h('div',{style:{display:'flex',gap:'10px',alignItems:'flex-start',marginBottom:'10px'}},
+              h('div',{style:{width:'28px',height:'28px',borderRadius:'50%',background:'#5C1F0A',border:'1px solid #8B3A1E',display:'flex',alignItems:'center',justifyContent:'center',fontFamily:'sans-serif',fontSize:'0.65rem',fontWeight:700,color:'#F5A623',flexShrink:0}},p.get('numero')||i+1),
+              h('div',{},
+                h('div',{style:{fontFamily:'sans-serif',fontWeight:700,fontSize:'0.88rem',color:'#fff',textTransform:'uppercase',letterSpacing:'0.04em',marginBottom:'4px'}},p.get('nome')||''),
+                h('div',{style:{fontFamily:'sans-serif',fontSize:'0.73rem',color:'#C4A882',fontStyle:'italic',lineHeight:'1.5'}},p.get('descricao')||'')
+              )
+            ),
+            h('div',{style:{display:'flex',gap:'4px',background:'rgba(0,0,0,0.3)',padding:'6px',borderRadius:'3px'}},
+              ['media','grande','gigante'].map(function(tam,j){
+                return h('div',{key:j,style:{flex:1,textAlign:'center',borderRight:j<2?'1px solid rgba(139,58,30,0.15)':'none'}},
+                  h('div',{style:{fontFamily:'sans-serif',fontSize:'0.5rem',color:'#8A6848',letterSpacing:'0.12em',textTransform:'uppercase',marginBottom:'2px'}},tam==='gigante'?'🔥 '+tam:tam),
+                  h('div',{style:{fontFamily:'Georgia,serif',fontSize:'0.85rem',fontWeight:700,color:'#F5A623'}},'R$\u00a0'+(t?t.get(tam)||0:0).toFixed(2).replace('.',','))
+                );
+              })
+            ),
+            h('div',{style:{marginTop:'10px',background:'#25D366',color:'#fff',padding:'9px',textAlign:'center',fontFamily:'sans-serif',fontWeight:700,fontSize:'0.75rem',letterSpacing:'0.08em',textTransform:'uppercase',borderRadius:'3px'}},'💬 Pedir esta pizza')
+          );
+        }):h('p',{style:{color:'#C4A882'}},'Adicione pizzas para visualizar.')
+      )
+    );
+  }});
+  CMS.registerPreviewTemplate("cardapio", CardapioPreview);
+
+  /* ── Depoimentos Preview ──────────────────────── */
+  var DepPreview = createClass({ render: function() {
+    var e=this.props.entry;
+    var titulo=e.getIn(['data','titulo'])||'Depoimentos';
+    var badge=e.getIn(['data','badge'])||'';
+    var items=e.getIn(['data','items']);
+    var first=items&&items.size>0?items.get(0):null;
+    return h('div',{style:{background:'#0A0604',padding:'50px 28px',textAlign:'center'}},
+      h('span',{style:{fontFamily:'sans-serif',fontSize:'0.68rem',color:'#F5A623',letterSpacing:'0.28em',textTransform:'uppercase',display:'block',marginBottom:'8px'}},badge),
+      h('h2',{style:{fontFamily:'Georgia,serif',fontSize:'2rem',fontWeight:900,color:'#fff',marginBottom:'32px'}},titulo),
+      first?h('div',{style:{background:'rgba(255,255,255,0.03)',borderTop:'3px solid #C8542E',maxWidth:'680px',margin:'0 auto',padding:'36px',textAlign:'left'}},
+        h('div',{style:{color:'#F5A623',fontSize:'0.95rem',letterSpacing:'4px',marginBottom:'14px'}},'★★★★★'),
+        h('blockquote',{style:{fontFamily:'Georgia,serif',fontStyle:'italic',color:'#FFF3E6',lineHeight:'1.85',fontSize:'1.05rem',marginBottom:'22px'}},'"',first.get('texto'),'"'),
+        h('div',{style:{display:'flex',alignItems:'center',gap:'12px'}},
+          h('div',{style:{width:'46px',height:'46px',borderRadius:'50%',background:'#8B3A1E',display:'flex',alignItems:'center',justifyContent:'center',color:'#fff',fontSize:'1.2rem'}},'👤'),
+          h('div',{},
+            h('div',{style:{fontFamily:'sans-serif',fontWeight:700,color:'#fff'}},first.get('nome')),
+            h('div',{style:{fontSize:'0.78rem',color:'#C4A882'}},first.get('tipo'))
+          )
+        )
+      ):h('p',{style:{color:'#C4A882'}},'Adicione depoimentos para visualizar.')
+    );
+  }});
+  CMS.registerPreviewTemplate("depoimentos", DepPreview);
+
+  /* ── Empresa Preview ──────────────────────────── */
+  var EmpresaPreview = createClass({ render: function() {
+    var e=this.props.entry;
+    var campos=[['Endereço','endereco'],['Horário','horario'],['WhatsApp','telefone_wpp'],['Telefone','telefone_fixo']];
+    return h('div',{style:{background:'#1C1008',padding:'50px 28px'}},
+      h('h2',{style:{fontFamily:'Georgia,serif',fontSize:'2rem',fontWeight:900,color:'#fff',marginBottom:'28px'}},'Informações da Empresa'),
+      h('div',{style:{display:'flex',flexDirection:'column',gap:'16px'}},
+        campos.map(function(c,i){
+          var v=e.getIn(['data',c[1]]);
+          return v?h('div',{key:i,style:{display:'flex',gap:'14px',alignItems:'flex-start'}},
+            h('span',{style:{color:'#F5A623',fontFamily:'sans-serif',fontSize:'0.68rem',fontWeight:700,letterSpacing:'0.14em',textTransform:'uppercase',minWidth:'90px',paddingTop:'2px'}},c[0]+':'),
+            h('span',{style:{color:'#FFF3E6',fontSize:'0.92rem'}},v)
+          ):null;
+        })
+      )
+    );
+  }});
+  CMS.registerPreviewTemplate("empresa", EmpresaPreview);
+  </script>
+</body>
+</html>

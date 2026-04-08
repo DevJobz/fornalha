@@ -1,0 +1,26 @@
+{
+  "badge": "Por que somos únicos",
+  "titulo": "Nossos Diferenciais",
+  "items": [
+    {
+      "icone": "calendar",
+      "titulo": "Rodízio Todos os Dias",
+      "texto": "De segunda a domingo, das 17h às 23h, você aproveita nosso rodízio completo. Saboreie quantas pizzas quiser, todos os dias da semana, sem exceção."
+    },
+    {
+      "icone": "fire",
+      "titulo": "Forno à Lenha Artesanal",
+      "texto": "Nossas pizzas são assadas no forno a lenha, com montagem 100% artesanal e manual. O fogo e a madeira conferem aquele sabor inconfundível que só a Fornalha tem."
+    },
+    {
+      "icone": "pizza",
+      "titulo": "Mais de 90 Sabores",
+      "texto": "Tradicionais, Especiais, Gourmet e Doces. Temos mais de 90 combinações cuidadosamente desenvolvidas para surpreender o seu paladar a cada visita."
+    },
+    {
+      "icone": "size",
+      "titulo": "Três Tamanhos Disponíveis",
+      "texto": "Média, Grande e o nosso exclusivo tamanho Gigante — o diferencial perfeito para grandes ocasiões, confraternizações e famílias que amam pizza."
+    }
+  ]
+}

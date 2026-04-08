@@ -1,0 +1,14 @@
+{
+  "logo_url": "/assets/images/uploads/logo-fornalha.png",
+  "logo_alt": "Fornalha Pizzaria",
+  "links": [
+    { "label": "Início",      "href": "#hero" },
+    { "label": "História",    "href": "#historia" },
+    { "label": "Diferenciais","href": "#diferenciais" },
+    { "label": "Cardápio",   "href": "#cardapio" },
+    { "label": "Galeria",    "href": "#galeria" },
+    { "label": "Contato",    "href": "#contato" }
+  ],
+  "cta_label": "Pedir Agora",
+  "cta_whatsapp": "Olá! Vim pelo site da Fornalha Pizzaria e gostaria de fazer um pedido!"
+}

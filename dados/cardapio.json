@@ -1,0 +1,1025 @@
+{
+  "pizzaria": "Fornalha Pizzaria",
+  "categorias": [
+    {
+      "id": "tradicionais",
+      "nome": "Tradicionais",
+      "pizzas": [
+        {
+          "numero": 1,
+          "nome": "CALABRESA SIMPLES",
+          "descricao": "MOLHO, CALABRESA FATIADA, CEBOLA, MUSSARELA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 41.00,
+            "grande": 46.00,
+            "gigante": 86.00
+          }
+        },
+        {
+          "numero": 2,
+          "nome": "MUSSARELA",
+          "descricao": "MOLHO, MUSSARELA, TOMATE, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 41.00,
+            "grande": 46.00,
+            "gigante": 86.00
+          }
+        },
+        {
+          "numero": 3,
+          "nome": "PORTUGUESA",
+          "descricao": "MOLHO, MUSSARELA, PRESUNTO, MILHO, ERVILHA, OVO, CEBOLA, TOMATE, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 41.00,
+            "grande": 46.00,
+            "gigante": 86.00
+          }
+        },
+        {
+          "numero": 4,
+          "nome": "PORTUGUESA C/ PALMITO",
+          "descricao": "MOLHO, MUSSARELA, PRESUNTO, OVO, PALMITO, CEBOLA, TOMATE, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 41.00,
+            "grande": 46.00,
+            "gigante": 86.00
+          }
+        },
+        {
+          "numero": 5,
+          "nome": "FRANGO SIMPLES",
+          "descricao": "MOLHO, FRANGO, MUSSARELA, TOMATE, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 41.00,
+            "grande": 46.00,
+            "gigante": 86.00
+          }
+        },
+        {
+          "numero": 6,
+          "nome": "MILHO",
+          "descricao": "MOLHO, MILHO, MUSSARELA, TOMATE, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 41.00,
+            "grande": 46.00,
+            "gigante": 86.00
+          }
+        },
+        {
+          "numero": 7,
+          "nome": "LOMBO SIMPLES",
+          "descricao": "MOLHO, LOMBO, MUSSARELA, CEBOLA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 41.00,
+            "grande": 46.00,
+            "gigante": 86.00
+          }
+        },
+        {
+          "numero": 8,
+          "nome": "PALMITO",
+          "descricao": "MOLHO, PALMITO, MUSSARELA, TOMATE, CEBOLA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 41.00,
+            "grande": 46.00,
+            "gigante": 86.00
+          }
+        },
+        {
+          "numero": 9,
+          "nome": "BRÓCOLIS SIMPLES",
+          "descricao": "MOLHO, BRÓCOLIS, MUSSARELA, TOMATE, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 41.00,
+            "grande": 46.00,
+            "gigante": 86.00
+          }
+        },
+        {
+          "numero": 10,
+          "nome": "ALHO",
+          "descricao": "MOLHO, MUSSARELA, TOMATE, ALHO FRITO, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 41.00,
+            "grande": 46.00,
+            "gigante": 86.00
+          }
+        },
+        {
+          "numero": 11,
+          "nome": "MARGUERITA",
+          "descricao": "MOLHO, MUSSARELA, TOMATE, PARMESÃO, MANJERICÃO, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 41.00,
+            "grande": 46.00,
+            "gigante": 86.00
+          }
+        },
+        {
+          "numero": 12,
+          "nome": "BERINJELA",
+          "descricao": "MOLHO, BERINJELA, MUSSARELA, TOMATE, PARMESÃO, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 41.00,
+            "grande": 46.00,
+            "gigante": 86.00
+          }
+        },
+        {
+          "numero": 13,
+          "nome": "AMERICANA",
+          "descricao": "MOLHO, PRESUNTO, MUSSARELA, BATATA PALHA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 41.00,
+            "grande": 46.00,
+            "gigante": 86.00
+          }
+        },
+        {
+          "numero": 14,
+          "nome": "BACON",
+          "descricao": "MOLHO, BACON, MUSSARELA, CEBOLA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 41.00,
+            "grande": 46.00,
+            "gigante": 86.00
+          }
+        },
+        {
+          "numero": 15,
+          "nome": "NAPOLITANA",
+          "descricao": "MOLHO, PRESUNTO, MUSSARELA, TOMATE, BACON, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 41.00,
+            "grande": 46.00,
+            "gigante": 86.00
+          }
+        }
+      ]
+    },
+    {
+      "id": "especiais",
+      "nome": "Especiais",
+      "pizzas": [
+        {
+          "numero": 16,
+          "nome": "FRANGO CROCANTE",
+          "descricao": "MOLHO, FRANGO, CREME DE LEITE, BACON, MUSSARELA, BATATA PALHA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 17,
+          "nome": "EGG BACON",
+          "descricao": "MOLHO, OVO, BACON, MUSSARELA, CEBOLA, CREAM CHEESE, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 18,
+          "nome": "FRANCESA",
+          "descricao": "MOLHO, PRESUNTO, MILHO, ERVILHA, MUSSARELA, BACON, CATUPIRY, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 19,
+          "nome": "AMERICANA ESPECIAL",
+          "descricao": "MOLHO, PRESUNTO, CHEDDAR, MUSSARELA, TOMATE, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 20,
+          "nome": "FRANGO ESPECIAL",
+          "descricao": "MOLHO, MUSSARELA, FRANGO, MILHO, CATUPIRY, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 21,
+          "nome": "ATUM FORNALHA",
+          "descricao": "MOLHO, MUSSARELA, ATUM, ERVILHA, CEBOLA, TOMATE, BACON, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 22,
+          "nome": "SARDINHA",
+          "descricao": "MOLHO, MUSSARELA, SARDINHA, PALMITO, TOMATE, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 23,
+          "nome": "ALICHE",
+          "descricao": "MOLHO, MUSSARELA, ALICHE, PALMITO, TOMATE, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 24,
+          "nome": "SALAME",
+          "descricao": "MOLHO, SALAME, CATUPIRY, MUSSARELA, TOMATE, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 25,
+          "nome": "PEPPERONI",
+          "descricao": "MOLHO, MUSSARELA, PEPPERONI, CATUPIRY, TOMATE, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 26,
+          "nome": "DORITOS",
+          "descricao": "MOLHO, MUSSARELA, BACON, CHEDDAR, DORITOS, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 27,
+          "nome": "RÚCULA C/ PALMITO",
+          "descricao": "MOLHO, MUSSARELA, TOMATE SECO, RÚCULA, PALMITO, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 28,
+          "nome": "CINCO QUEIJOS",
+          "descricao": "MOLHO, MUSSARELA, GORGONZOLA, CATUPIRY, PARMESÃO, PROVOLONE, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 29,
+          "nome": "FRANGO COLORIDO",
+          "descricao": "MOLHO, FRANGO, BRÓCOLIS, CHEDDAR, TOMATE, MUSSARELA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 30,
+          "nome": "FORNALHA",
+          "descricao": "MOLHO, CALABRESA EM PEDAÇOS, CATUPIRY, PALMITO, CEBOLA, MUSSARELA, ALHO FRITO, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 31,
+          "nome": "FRANGO CREMOSO",
+          "descricao": "MOLHO, FRANGO, CREME DE LEITE, CREAM CHEESE, CHAMPIGNON, MUSSARELA, PARMESÃO, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 32,
+          "nome": "FORNALHA DA CASA",
+          "descricao": "MOLHO, MUSSARELA, CALABRESA, TOMATE, MANJERICÃO, OVO, BACON, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 33,
+          "nome": "FRANGO RÚSTICO",
+          "descricao": "MOLHO, MUSSARELA, FRANGO, MILHO, CATUPIRY, BACON, OVO, TOMATE, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 34,
+          "nome": "CALABRESA MEXICANA",
+          "descricao": "MOLHO, CALABRESA EM PEDAÇOS, CEBOLA, PIMENTA DEDO DE MOÇA, MUSSARELA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 35,
+          "nome": "CORN BACON",
+          "descricao": "MOLHO, MUSSARELA, CATUPIRY, MILHO, BACON, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 36,
+          "nome": "LOMBO MEXICANO",
+          "descricao": "MOLHO, LOMBO, CATUPIRY, CEBOLA, MUSSARELA, PIMENTA BIQUINHO, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 37,
+          "nome": "CALABRESA RÚSTICA",
+          "descricao": "MOLHO, MUSSARELA, CALABRESA EM PEDAÇOS, RÚCULA, BACON, CATUPIRY, CEBOLA, ORÉGANO E AZEITONA (RÚCULA POR BAIXO DA CALABRESA)",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 38,
+          "nome": "HOT DOG",
+          "descricao": "SALSICHA AO MOLHO, MILHO, CREAM CHEESE, BACON, BATATA PALHA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 39,
+          "nome": "CANADENSE",
+          "descricao": "MOLHO, MUSSARELA, LOMBO, BACON, TOMATE, RÚCULA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 40,
+          "nome": "PROVOLONE",
+          "descricao": "MOLHO, MUSSARELA, TOMATE, PROVOLONE, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 41,
+          "nome": "BRÓCOLIS SUPREMO",
+          "descricao": "MOLHO, FRANGO, BRÓCOLIS, CREAM CHEESE, BACON, MUSSARELA, TOMATE, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 42,
+          "nome": "ESCAROLA",
+          "descricao": "MOLHO, ESCAROLA, CATUPIRY, MUSSARELA, TOMATE, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 43,
+          "nome": "BRÓCOLIS ESPECIAL",
+          "descricao": "MOLHO, BRÓCOLIS, CATUPIRY, BACON, MUSSARELA, TOMATE, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 44,
+          "nome": "FRANGO 3 QUEIJOS",
+          "descricao": "MOLHO, FRANGO, CEBOLA, BACON, GORGONZOLA, CATUPIRY, MUSSARELA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 45,
+          "nome": "LOMBO ESPECIAL",
+          "descricao": "MOLHO, LOMBO, CEBOLA, CATUPIRY, MUSSARELA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 46,
+          "nome": "CHEDDAR LOMBO",
+          "descricao": "MOLHO, LOMBO, BACON, CHEDDAR, MUSSARELA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 47,
+          "nome": "FRANGO CHEDDAR",
+          "descricao": "MOLHO, FRANGO, BACON, CHEDDAR, MUSSARELA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 48,
+          "nome": "CUBANA",
+          "descricao": "MOLHO, LOMBO, CEBOLA, CHAMPIGNON, PALMITO, MUSSARELA, PIMENTÃO, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 49,
+          "nome": "CUIABANA",
+          "descricao": "MOLHO, LOMBO, CHAMPIGNON, PALMITO, CEBOLA, MUSSARELA, ALHO FRITO, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 50,
+          "nome": "PANTANAL",
+          "descricao": "MOLHO, MUSSARELA, RÚCULA, TOMATE SECO, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 51,
+          "nome": "LOMBO AO ALHO",
+          "descricao": "MOLHO, MUSSARELA, LOMBO, CATUPIRY, ALHO, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        },
+        {
+          "numero": 52,
+          "nome": "FRANGO C/ CATUPIRY",
+          "descricao": "MOLHO, MUSSARELA, FRANGO, CATUPIRY, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 42.00,
+            "grande": 49.00,
+            "gigante": 91.00
+          }
+        }
+      ]
+    },
+    {
+      "id": "gourmet",
+      "nome": "Gourmet",
+      "pizzas": [
+        {
+          "numero": 53,
+          "nome": "STROGONOFF DE CARNE",
+          "descricao": "MOLHO, FILÉ MIGNON, MOLHO DE STROGONOFF, CHAMPIGNON, MUSSARELA, BATATA PALHA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 54,
+          "nome": "STROGONOFF DE CAMARÃO",
+          "descricao": "MOLHO, CAMARÃO, MOLHO DE STROGONOFF, CHAMPIGNON, MUSSARELA, BATATA PALHA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 55,
+          "nome": "STROGONOFF DE FRANGO",
+          "descricao": "MOLHO, FRANGO, MOLHO DE STROGONOFF, CHAMPIGNON, MUSSARELA, BATATA PALHA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 56,
+          "nome": "FILÉ BARBECUE",
+          "descricao": "MOLHO, MUSSARELA, FILÉ MIGNON, MOLHO BARBECUE, CHAMPIGNON, CEBOLA, TOMATE, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 57,
+          "nome": "FILÉ MEXICANO",
+          "descricao": "MOLHO, FILÉ MIGNON, PALMITO, CATUPIRY, PIMENTA DEDO DE MOÇA, MUSSARELA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 58,
+          "nome": "FILÉ AO BRÓCOLIS",
+          "descricao": "MOLHO, MUSSARELA, FILÉ MIGNON, BRÓCOLIS, CREAM CHEESE, ALHO FRITO, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 59,
+          "nome": "COSTELINHA MEXICANA",
+          "descricao": "MOLHO, COSTELINHA DE PORCO, PIMENTA DEDO DE MOÇA, MUSSARELA, MANJERICÃO, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 60,
+          "nome": "COSTELINHA BARBECUE",
+          "descricao": "MOLHO, COSTELINHA DE PORCO, CEBOLA, CATUPIRY, MUSSARELA, BARBECUE, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 61,
+          "nome": "LOMBO FORNALHA",
+          "descricao": "MOLHO, LOMBO, GELEIA DE ABACAXI, MUSSARELA, TOMATE, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 62,
+          "nome": "LOMBO TOSCANA",
+          "descricao": "MOLHO, MUSSARELA, LOMBO, ATUM, BACON, CEBOLA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 63,
+          "nome": "TORRESMO",
+          "descricao": "MOLHO, MUSSARELA, TORRESMO, RASPA DE LIMÃO, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 64,
+          "nome": "TORRESMO RÚSTICO",
+          "descricao": "MOLHO, MUSSARELA, TORRESMO, PIMENTA BIQUINHO, CEBOLA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 65,
+          "nome": "CAMARÃO TOSCANA",
+          "descricao": "MOLHO, MUSSARELA, CAMARÃO, PIMENTA BIQUINHO, MANJERICÃO, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 50.00,
+            "grande": 55.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 66,
+          "nome": "CARNE DE SOL",
+          "descricao": "MOLHO, MUSSARELA, CARNE SECA, CATUPIRY, ALHO FRITO, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 50.00,
+            "grande": 55.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 67,
+          "nome": "ABOBRINHA",
+          "descricao": "MOLHO, MUSSARELA, ABOBRINHA, CATUPIRY, TOMATE, MANJERICÃO, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 68,
+          "nome": "SERTANEJA",
+          "descricao": "MOLHO, CARNE DE SOL, CATUPIRY, MUSSARELA, PIMENTA BIQUINHO, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 50.00,
+            "grande": 55.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 69,
+          "nome": "PEITO DE PERU ESP.",
+          "descricao": "MOLHO, PEITO DE PERU, PALMITO, MUSSARELA, RÚCULA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 70,
+          "nome": "SALAME GOURMET",
+          "descricao": "MOLHO, MUSSARELA, SALAME, CREAM CHEESE, ALHO FRITO, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 71,
+          "nome": "CALABRESA DO CHEF",
+          "descricao": "MOLHO, CALABRESA EM PEDAÇOS, BRÓCOLIS, PALMITO, CEBOLA, BACON, MUSSARELA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 72,
+          "nome": "TOSCANA DA CASA",
+          "descricao": "MOLHO, CALABRESA EM PEDAÇOS, CEBOLA, BACON, OVO, PIMENTA CALABRESA, MUSSARELA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 73,
+          "nome": "PERUANA",
+          "descricao": "MOLHO, PEITO DE PERU, CEBOLA, OVO, RÚCULA, MUSSARELA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 74,
+          "nome": "MEXICANA DA CASA",
+          "descricao": "MOLHO, CALABRESA EM PEDAÇOS, PIMENTA CALABRESA, OVO, MUSSARELA, CEBOLA, CATUPIRY, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 75,
+          "nome": "MODA DO PIZZAIOLO",
+          "descricao": "MOLHO, PEITO DE PERU, PALMITO, CATUPIRY, RÚCULA, MUSSARELA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 76,
+          "nome": "VEGETARIANA",
+          "descricao": "MOLHO, BRÓCOLIS, MILHO, ERVILHA, OVO, PALMITO, TOMATE, MUSSARELA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 77,
+          "nome": "FITNESS",
+          "descricao": "MOLHO, PEITO DE PERU, PALMITO, TOMATE, RÚCULA, MUSSARELA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 78,
+          "nome": "RODEIO",
+          "descricao": "MOLHO, COSTELA BOVINA, CEBOLA, CATUPIRY, ALHO FRITO, MUSSARELA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 50.00,
+            "grande": 55.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 79,
+          "nome": "PERNIL",
+          "descricao": "MOLHO, PERNIL SUÍNO, CEBOLA, TOMATE, MUSSARELA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 80,
+          "nome": "COSTELINHA NA ABOBRINHA",
+          "descricao": "MOLHO, COSTELINHA SUÍNA, ABOBRINHA FATIADA, CEBOLA, TOMATE, MUSSARELA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 81,
+          "nome": "CORINTHIANS",
+          "descricao": "MOLHO, COSTELA BOVINA (COZIDA NA CERVEJA), CEBOLA, BACON, MANJERICÃO, MUSSARELA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 50.00,
+            "grande": 55.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 82,
+          "nome": "ESCONDIDINHO DE CARNE SECA",
+          "descricao": "MOLHO, ALHO, CARNE SECA, BATATA, CREME DE LEITE, CATUPIRY, MUSSARELA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 83,
+          "nome": "ESCONDIDINHO DE CARNE",
+          "descricao": "MOLHO, FILÉ MIGNON, BATATA, BACON, CREME DE LEITE, CATUPIRY, MUSSARELA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 84,
+          "nome": "ESCONDIDINHO DE FRANGO",
+          "descricao": "MOLHO, FRANGO, BATATA, BACON, CREME DE LEITE, CATUPIRY, MUSSARELA, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 85,
+          "nome": "GORGONZOLA AO PÊSSEGO",
+          "descricao": "MOLHO, MUSSARELA, GORGONZOLA, PÊSSEGO, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        },
+        {
+          "numero": 86,
+          "nome": "BACON PRIME",
+          "descricao": "MOLHO, MUSSARELA, CATUPIRY, TOMATE, BACON, ALHO FRITO, ORÉGANO E AZEITONA",
+          "tamanhos": {
+            "media": 43.00,
+            "grande": 49.00,
+            "gigante": 95.00
+          }
+        }
+      ]
+    },
+    {
+      "id": "doces",
+      "nome": "Doces",
+      "pizzas": [
+        {
+          "numero": 87,
+          "nome": "NUTELA C/ LEITE NINHO",
+          "descricao": "MORANGO - BANANA - UVA - ABACAXI (ESCOLHA 1)",
+          "tamanhos": {
+            "media": 41.00,
+            "grande": 46.00,
+            "gigante": 85.00
+          }
+        },
+        {
+          "numero": 88,
+          "nome": "FONDUE DE CHOCOLATE",
+          "descricao": "MORANGO - BANANA - UVA - ABACAXI (ESCOLHA 2)",
+          "tamanhos": {
+            "media": 41.00,
+            "grande": 46.00,
+            "gigante": 85.00
+          }
+        },
+        {
+          "numero": 89,
+          "nome": "CHOCOLATE",
+          "descricao": "CONFETI - GRANULADO - BOMBOM - CHOCOBALL - PAÇOCA (ESCOLHA 1)",
+          "tamanhos": {
+            "media": 41.00,
+            "grande": 46.00,
+            "gigante": 85.00
+          }
+        },
+        {
+          "numero": 90,
+          "nome": "KIT KAT",
+          "descricao": "CHOCOLATE, KIT KAT E LEITE CONDENSADO",
+          "tamanhos": {
+            "media": 41.00,
+            "grande": 46.00,
+            "gigante": 85.00
+          }
+        },
+        {
+          "numero": 91,
+          "nome": "DOCE DE LEITE C/ COCO",
+          "descricao": "DOCE DE LEITE COM COCO RALADO E LEITE CONDENSADO",
+          "tamanhos": {
+            "media": 41.00,
+            "grande": 46.00,
+            "gigante": 85.00
+          }
+        },
+        {
+          "numero": 92,
+          "nome": "ROMEU E JULIETA",
+          "descricao": "MUSSARELA COM GOIABADA",
+          "tamanhos": {
+            "media": 41.00,
+            "grande": 46.00,
+            "gigante": 85.00
+          }
+        },
+        {
+          "numero": 93,
+          "nome": "BEIJINHO",
+          "descricao": "CHOCOLATE BRANCO COM COCO RALADO E LEITE CONDENSADO",
+          "tamanhos": {
+            "media": 41.00,
+            "grande": 46.00,
+            "gigante": 85.00
+          }
+        },
+        {
+          "numero": 94,
+          "nome": "PRESTÍGIO",
+          "descricao": "CHOCOLATE, COCO RALADO E LEITE CONDENSADO",
+          "tamanhos": {
+            "media": 41.00,
+            "grande": 46.00,
+            "gigante": 85.00
+          }
+        },
+        {
+          "numero": 95,
+          "nome": "BANANA NEVADA",
+          "descricao": "MUSSARELA, BANANA, CANELA, CHOCOLATE BRANCO E AÇÚCAR CRISTAL",
+          "tamanhos": {
+            "media": 41.00,
+            "grande": 46.00,
+            "gigante": 85.00
+          }
+        },
+        {
+          "numero": 96,
+          "nome": "ABACAXI NEVADO",
+          "descricao": "MUSSARELA, ABACAXI, CREME DE LEITE, CHOCOLATE BRANCO E LEITE CONDENSADO",
+          "tamanhos": {
+            "media": 41.00,
+            "grande": 46.00,
+            "gigante": 85.00
+          }
+        },
+        {
+          "numero": 97,
+          "nome": "MORANGO NEVADO",
+          "descricao": "MUSSARELA, MORANGO, LEITE CONDENSADO, CREME DE LEITE E CHOCOLATE BRANCO",
+          "tamanhos": {
+            "media": 41.00,
+            "grande": 46.00,
+            "gigante": 85.00
+          }
+        },
+        {
+          "numero": 98,
+          "nome": "3 AMORES",
+          "descricao": "DOCE DE LEITE, CATUPIRY E CHOCOLATE BRANCO",
+          "tamanhos": {
+            "media": 41.00,
+            "grande": 46.00,
+            "gigante": 85.00
+          }
+        }
+      ]
+    }
+  ],
+  "bordas_recheadas": {
+    "sabores": [
+      "CREAM CHEESE",
+      "CATUPIRY",
+      "CHEDDAR",
+      "MUSSARELA",
+      "BACON",
+      "KIT KAT",
+      "CHOCOLATE"
+    ],
+    "precos": {
+      "media": 10.00,
+      "grande": 12.00,
+      "gigante": 20.00
+    }
+  }
+}
