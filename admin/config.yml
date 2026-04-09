@@ -218,8 +218,8 @@ collections:
                   - { label: "★★★★★ 5 estrelas", value: 5 }
                   - { label: "★★★★☆ 4 estrelas", value: 4 }
                   - { label: "★★★☆☆ 3 estrelas", value: 3 }
-                  
-                  - name: "combos"
+
+      - name: "combos"
         label: "🔥 Combos Especiais"
         file: "dados/combos.json"
         format: json
