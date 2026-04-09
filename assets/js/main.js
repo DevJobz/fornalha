@@ -39,12 +39,13 @@ async function carregarDados() {
     '/dados/navbar.json', '/dados/hero.json', '/dados/historia.json',
     '/dados/diferenciais.json', '/dados/cardapio.json', '/dados/galeria.json',
     '/dados/depoimentos.json', '/dados/empresa.json',
+    '/dados/combos.json',
   ];
   try {
     const rs = await Promise.all(urls.map(u => fetch(u)));
     const ds = await Promise.all(rs.map((r,i) => { if(!r.ok) throw new Error(urls[i]); return r.json(); }));
     return { navbar:ds[0], hero:ds[1], historia:ds[2], diferenciais:ds[3],
-             cardapio:ds[4], galeria:ds[5], depoimentos:ds[6], empresa:ds[7] };
+             cardapio:ds[4], galeria:ds[5], depoimentos:ds[6], empresa:ds[7], combos:ds[8] };
   } catch(e) { console.error('[Fornalha]', e); return null; }
 }
 
@@ -328,22 +329,69 @@ function filtrarPizzas(termo) {
   });
 }
 
+/* ── COMBOS ─────────────────────────────────────── */
+function renderCombos(d) {
+  const el=$('#combos'); if(!el||!d) return;
+  const cards=d.items.map(c=>`
+    <div class="combo-card anim-fade${c.destaque?' destaque':''}">
+      <img class="combo-img" src="${c.imagem}" alt="Combo ${c.numero}"
+           loading="lazy" onerror="this.src='https://picsum.photos/seed/combo${c.numero}/600/400'">
+      <div class="combo-body">
+        <div class="combo-header">
+          <div class="combo-num">${c.numero}</div>
+          <div class="combo-titulo">Combo ${c.numero}</div>
+        </div>
+        <div class="combo-itens">
+          ${c.itens.map(it=>`<span class="combo-item">${it}</span>`).join('')}
+        </div>
+        <div class="combo-preco-wrap">
+          <div>
+            <div class="combo-preco-label">Apenas</div>
+            <div class="combo-preco-val">${brl(c.preco)}</div>
+          </div>
+          <a class="btn-pedir"
+             href="${wpp(`Olá! Vim pelo site e gostaria de pedir o *Combo ${c.numero}* por ${brl(c.preco)}. Qual a disponibilidade?`)}"
+             target="_blank" rel="noopener" style="width:auto;padding:10px 18px">
+            ${I.wpp} Pedir Combo
+          </a>
+        </div>
+      </div>
+    </div>`).join('');
+  el.innerHTML=`<div class="container">
+    <div class="secao-header anim-fade">
+      <div class="badge">${d.badge}</div>
+      <h2 class="secao-titulo">Nossos <em>${d.titulo}</em></h2>
+    </div>
+    <div class="combos-grid">${cards}</div>
+  </div>`;
+}
+
 /* ── GALERIA ────────────────────────────────────────── */
 let _galItems = [];
 function renderGaleria(d) {
   const el=$('#galeria'); if(!el||!d) return;
   _galItems=d.items;
   const items=d.items.map((it,i)=>{
-    const isV=it.tipo==='video';
+    const isYt = it.tipo === 'video';
+    const isLocal = it.tipo === 'video_local';
+    const isV = isYt || isLocal;
+    
+    let midiaHTML = '';
+    
+    if (isLocal) {
+      midiaHTML = `<video class="gal-img" src="${it.url}#t=0.001" preload="metadata" muted playsinline></video>`;
+    } else {
+      const imgSrc = isYt ? '/assets/images/uploads/galeria-video-thumb.jpg' : it.url;
+      midiaHTML = `<img class="gal-img" src="${imgSrc}" alt="${it.legenda}" loading="lazy" onerror="this.src='https://picsum.photos/seed/pizza${i}/600/400'">`;
+    }
+
     return `<div class="gal-item" data-index="${i}" role="button" tabindex="0" aria-label="${it.legenda}">
       ${isV?'<span class="gal-video-badge">▶ Vídeo</span>':''}
-      <img class="gal-img"
-           src="${isV?'/assets/images/uploads/galeria-video-thumb.jpg':it.url}"
-           alt="${it.legenda}" loading="lazy"
-           onerror="this.src='https://picsum.photos/seed/pizza${i}/600/400'">
+      ${midiaHTML}
       <div class="gal-overlay"><div class="gal-play-icon">${isV?I.play:I.zoom}</div></div>
       <div class="gal-label">${it.legenda}</div>
     </div>`;}).join('');
+    
   el.innerHTML=`<div class="container">
     <div class="secao-header anim-fade">
       <div class="badge">${d.badge}</div>
@@ -396,6 +444,7 @@ function injectLightbox() {
     <button class="lb-close" aria-label="Fechar">${I.cls}</button>
     <img id="lb-img" alt="">
     <iframe id="lb-iframe" allowfullscreen title="Vídeo"></iframe>
+    <video id="lb-video" controls playsinline></video>
     <div class="lb-caption"></div>
   </div>
   <button class="lb-nav lb-prev" aria-label="Anterior">${I.arL}</button>
@@ -403,18 +452,39 @@ function injectLightbox() {
   document.body.appendChild(div);
 }
 function initLightbox() {
-  const box=$('#lightbox'), img=$('#lb-img'), ifr=$('#lb-iframe'),
+  const box=$('#lightbox'), img=$('#lb-img'), ifr=$('#lb-iframe'), 
+        video=$('#lb-video'),
         cls=$('.lb-close',box), lp=$('.lb-prev',box), ln=$('.lb-next',box), cap=$('.lb-caption',box);
   if(!box) return;
   let cur=0;
+  
   const abrir=i=>{
     cur=i; const it=_galItems[i]; if(!it) return;
-    if(it.tipo==='video'){img.style.display='none';ifr.src=it.url+'?autoplay=1';ifr.classList.add('ativo');}
-    else{ifr.classList.remove('ativo');ifr.src='';img.style.display='';img.src=it.url;img.alt=it.legenda;}
+    
+    // Reseta todos os elementos de mídia primeiro
+    img.style.display='none'; 
+    ifr.classList.remove('ativo'); ifr.src='';
+    video.classList.remove('ativo'); video.pause(); video.src='';
+    
+    if(it.tipo==='video'){
+      ifr.src=it.url+'?autoplay=1'; ifr.classList.add('ativo');
+    } else if (it.tipo==='video_local') {
+      video.src=it.url; video.classList.add('ativo'); video.play();
+    } else {
+      img.style.display=''; img.src=it.url; img.alt=it.legenda;
+    }
+    
     if(cap) cap.textContent=it.legenda||'';
     box.classList.add('ativo'); document.body.style.overflow='hidden';
   };
-  const fechar=()=>{box.classList.remove('ativo');ifr.src='';ifr.classList.remove('ativo');document.body.style.overflow='';};
+  
+  const fechar=()=>{
+    box.classList.remove('ativo'); 
+    ifr.src=''; ifr.classList.remove('ativo');
+    video.pause(); video.src=''; video.classList.remove('ativo'); 
+    document.body.style.overflow='';
+  };
+  
   const nav=d=>{cur=(cur+d+_galItems.length)%_galItems.length;abrir(cur);};
   document.addEventListener('click',e=>{const it=e.target.closest('.gal-item');if(it)abrir(+it.dataset.index);});
   document.addEventListener('keydown',e=>{
@@ -579,6 +649,7 @@ async function init() {
   renderHistoria(d.historia);
   renderDiferenciais(d.diferenciais);
   renderCardapio(d.cardapio);
+  renderCombos(d.combos);
   renderGaleria(d.galeria);
   renderDepoimentos(d.depoimentos);
   renderEmpresa(d.empresa);

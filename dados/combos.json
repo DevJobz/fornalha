@@ -1,0 +1,41 @@
+{
+  "badge": "Promoções Especiais",
+  "titulo": "Combos",
+  "items": [
+    {
+      "id": "combo1",
+      "numero": 1,
+      "imagem": "/assets/images/uploads/combo1.jpeg",
+      "itens": [
+        "1 Pizza Grande",
+        "1 Broto de Chocolate (Consultar Sabores)",
+        "1 Coca-Cola 1L (Garrafa de Vidro)"
+      ],
+      "preco": 79.90,
+      "destaque": false
+    },
+    {
+      "id": "combo2",
+      "numero": 2,
+      "imagem": "/assets/images/uploads/combo2.jpeg",
+      "itens": [
+        "2 Pizzas Grandes",
+        "1 Broto de Chocolate (Consultar Sabor)",
+        "1 Coca-Cola 1L (Garrafa de Vidro)"
+      ],
+      "preco": 119.90,
+      "destaque": true
+    },
+    {
+      "id": "combo3",
+      "numero": 3,
+      "imagem": "/assets/images/uploads/combo3.jpeg",
+      "itens": [
+        "1 Pizza Gigante Com Até 4 Sabores",
+        "1 Coca-Cola 1L (Garrafa de Vidro)"
+      ],
+      "preco": 99.90,
+      "destaque": false
+    }
+  ]
+}

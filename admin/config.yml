@@ -218,3 +218,25 @@ collections:
                   - { label: "★★★★★ 5 estrelas", value: 5 }
                   - { label: "★★★★☆ 4 estrelas", value: 4 }
                   - { label: "★★★☆☆ 3 estrelas", value: 3 }
+                  
+                  - name: "combos"
+        label: "🔥 Combos Especiais"
+        file: "dados/combos.json"
+        format: json
+        fields:
+          - { label: "Badge", name: badge, widget: string }
+          - { label: "Título da Seção", name: titulo, widget: string }
+          - label: "Combos"
+            name: items
+            widget: list
+            summary: "Combo {{fields.numero}} — R$ {{fields.preco}}"
+            fields:
+              - { label: "ID (ex: combo1)", name: id, widget: string }
+              - { label: "Número do Combo", name: numero, widget: number }
+              - { label: "Imagem do Combo", name: imagem, widget: image }
+              - label: "Itens inclusos"
+                name: itens
+                widget: list
+                field: { label: "Item", name: item, widget: string }
+              - { label: "Preço (R$)", name: preco, widget: number, value_type: float }
+              - { label: "Destaque (badge 'Mais Pedido')", name: destaque, widget: boolean, default: false }
